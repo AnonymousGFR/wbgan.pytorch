@@ -13,6 +13,7 @@ from DCGAN.trainer import run
 exe_dict = {
   'CelebA64_dcgan_wgan_gp': run.train,
   'CelebA64_dcgan_wgan_gp_bound_sinkhorn': run.train,
+  'Calculate_inception_moments_Celeba64': calculate_inception_moments.create_inception_moments,
 }
 
 

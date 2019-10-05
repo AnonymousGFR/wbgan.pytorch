@@ -26,5 +26,13 @@ python main.py \
   --command CelebA64_dcgan_wgan_gp_bound_sinkhorn \
   --outdir results/temp/CelebA64_dcgan_wgan_gp_bound_sinkhorn
 ```
+# Acknowledgments
+Thanks BigGAN code from https://github.com/ajbrock/BigGAN-PyTorch.
+DCGAN code from https://github.com/LynnHo/DCGAN-LSGAN-WGAN-GP-DRAGAN-Pytorch.
+
+
+
+
+
 
 

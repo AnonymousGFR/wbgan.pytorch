@@ -1,0 +1,206 @@
+plot_wbgan_gp_shallow:
+  title: "WGANs vs WBGANs"
+  tag: 'test/FID'
+  use_dump: True
+  ylim:
+    - 30
+    - 210
+  xlim:
+    - 0
+    - 300
+  lines:
+#    wbgan_gp_b0.1:
+#      tbdir: 'results/DCGAN/test_cifar10_dcgan_wbgan_gp_20190727-22_12_40'
+#    wbgan_gp_b0.3:
+#      tbdir: 'results/DCGAN/test_cifar10_dcgan_wbgan_gp_20190727-22_14_00'
+#    wbgan_gp_b0.5:
+#      tbdir: 'results/DCGAN/test_cifar10_dcgan_wbgan_gp_20190727-22_14_38'
+    WGAN-GP:
+      tbdir: 'results/DCGAN/test_cifar10_dcgan_wgan_gp_20190727-22_26_11'
+      property:
+        color: 'red'
+        alpha: 0.4
+        lw: 3
+    WBGAN-GP:
+      tbdir: 'results/DCGAN/test_cifar10_dcgan_wbgan_gp_20190727-22_15_41'
+      property:
+        color: 'red'
+
+#    wgan_gp1:
+#      tbdir: 'results/DCGAN/test_cifar10_dcgan_wgan_gp_20190727-22_28_00'
+#    wgan_gp3:
+#      tbdir: 'results/DCGAN/test_cifar10_dcgan_wgan_gp_20190727-22_29_56'
+    WGAN-div:
+      tbdir: 'results/DCGAN/test_cifar10_dcgan_wgan_div_20190730-00_54_56'
+      property:
+        color: 'green'
+        alpha: 0.4
+        lw: 3
+    WBGAN-div:
+      tbdir: 'results/DCGAN/test_cifar10_dcgan_wbgan_div_20190730-00_55_20'
+      property:
+        color: 'green'
+    WGAN-GPReal:
+      tbdir: 'results/DCGAN/test_cifar10_dcgan_wgan_gpreal_20190730-00_22_06'
+      property:
+        color: 'blue'
+        alpha: 0.4
+        lw: 3
+    WBGAN-GPReal:
+      tbdir: 'results/DCGAN/test_cifar10_dcgan_wbgan_gpreal_20190730-00_27_32'
+      property:
+        color: 'blue'
+
+
+wgan_gp_cifar10:
+  dataset: cifar10
+  dataroot: '~/.keras/cifar10'
+  imageSize: 32
+  batchSize: 64
+#  batchSize: 64
+  cuda: true
+  manualSeed: 13
+  niter: 300
+#  netD_type: 'resnet101'
+  netD_type: 'darts'
+  darts_model: '/cluster/home/it_stu39/ZhouPeng/code/pt.darts/EXPERIMENTS/results/test_cnn_cifar10_augment_sample_net_20190811-13_08_17/checkpoint.pth.tar'
+#  darts_model: '/cluster/home/it_stu39/ZhouPeng/code/pt.darts/EXPERIMENTS/results/test_cnn_cifar10_augment_sample_net_20190811-13_08_17/darts_net.pt'
+  loss: wgan_gp
+  use_bound: false
+  inception_metric:
+    saved_inception_moments: '~/.keras/cifar10/cifar10_inception_moments.npz'
+    num_inception_images: 50000
+    batch_size: 256
+  dummy_train: false
+
+wgan_gp_adv_cifar10:
+  dataset: cifar10
+  dataroot: '~/.keras/cifar10'
+  imageSize: 32
+  cuda: true
+  manualSeed: 13
+  niter: 300
+  netD_type: 'resnet18'
+#  netD_type: 'darts'
+#  darts_model: '/cluster/home/it_stu39/ZhouPeng/code/pt.darts/EXPERIMENTS/results/test_cnn_cifar10_augment_sample_net_20190811-13_08_17/checkpoint.pth.tar'
+  loss: wgan_gp
+  adv_train: true
+  adv_lr: 0.1
+  use_bound: false
+  inception_metric:
+    saved_inception_moments: '~/.keras/cifar10/cifar10_inception_moments.npz'
+    num_inception_images: 50000
+    batch_size: 256
+  dummy_train: false
+
+wbgan_gp_cifar10:
+  dataset: cifar10
+  dataroot: '~/.keras/cifar10'
+  imageSize: 32
+  cuda: true
+  manualSeed: 13
+  niter: 300
+  loss: wgan_gp
+  use_bound: true
+  bound: 1
+  inception_metric:
+    saved_inception_moments: '~/.keras/cifar10/cifar10_inception_moments.npz'
+    num_inception_images: 50000
+    batch_size: 256
+  dummy_train: false
+
+
+wgan_div_cifar10:
+  dataset: cifar10
+  dataroot: '~/.keras/cifar10'
+  imageSize: 32
+  cuda: true
+  manualSeed: 13
+  niter: 300
+  loss: 'wgan_div'
+  use_bound: false
+  inception_metric:
+    saved_inception_moments: '~/.keras/cifar10/cifar10_inception_moments.npz'
+    num_inception_images: 50000
+    batch_size: 256
+  dummy_train: false
+
+
+wbgan_div_cifar10:
+  dataset: cifar10
+  dataroot: '~/.keras/cifar10'
+  imageSize: 32
+  cuda: true
+  manualSeed: 13
+  niter: 300
+  loss: 'wgan_div'
+  use_bound: true
+  bound: 0.1
+  inception_metric:
+    saved_inception_moments: '~/.keras/cifar10/cifar10_inception_moments.npz'
+    num_inception_images: 50000
+    batch_size: 256
+  dummy_train: false
+
+
+wgan_gpreal_cifar10:
+  dataset: cifar10
+  dataroot: '~/.keras/cifar10'
+  imageSize: 32
+  cuda: true
+  manualSeed: 13
+  niter: 300
+  loss: 'wgan_gpreal'
+  use_bound: false
+  inception_metric:
+    saved_inception_moments: '~/.keras/cifar10/cifar10_inception_moments.npz'
+    num_inception_images: 50000
+    batch_size: 256
+  dummy_train: false
+
+wgan_gpreal_adv_cifar10:
+  dataset: cifar10
+  dataroot: '~/.keras/cifar10'
+  imageSize: 32
+  batchSize: 64
+  cuda: true
+  manualSeed: 13
+  niter: 300
+#  netD_type: 'DCGAN'
+#  netD_type: 'inception_v3'
+#  netD_type: 'resnet18'
+#  netD_type: 'resnet34'
+#  netD_type: 'resnet50'
+#  netD_type: 'resnet101'
+  netD_type: 'darts'
+  darts_model: '/cluster/home/it_stu39/ZhouPeng/code/pt.darts/EXPERIMENTS/results/test_cnn_cifar10_augment_sample_net_20190811-20_56_38/checkpoint.pth.tar'
+#  darts_model: '/cluster/home/it_stu39/ZhouPeng/code/pt.darts/EXPERIMENTS/results/test_cnn_cifar10_augment_sample_net_20190811-13_08_17/darts_net.pt'
+  loss: 'wgan_gpreal'
+  adaptive_gp: true
+  gp_lambda: 10
+  adv_train: true
+  adv_lr: 0.1
+  adv_value: 0
+  use_bound: false
+  n_critic: 1
+  inception_metric:
+    saved_inception_moments: '~/.keras/cifar10/cifar10_inception_moments.npz'
+    num_inception_images: 50000
+    batch_size: 256
+  dummy_train: false
+
+wbgan_gpreal_cifar10:
+  dataset: cifar10
+  dataroot: '~/.keras/cifar10'
+  imageSize: 32
+  cuda: true
+  manualSeed: 13
+  niter: 300
+  loss: 'wgan_gpreal'
+  use_bound: true
+  bound: 0.5
+  inception_metric:
+    saved_inception_moments: '~/.keras/cifar10/cifar10_inception_moments.npz'
+    num_inception_images: 50000
+    batch_size: 256
+  dummy_train: false

@@ -1,0 +1,44 @@
+main:
+  seed: 1234
+  epochs: 200
+trainer:
+  type: WBGAN_AGP_DCGAN_CelebA64
+  model:
+    d_use_lp: true
+    z_dim: 100
+    ema_start: 5000
+  optimizer:
+    d_lr: 0.0002
+    d_beta1: 0.5
+    d_beta2: 0.999
+    g_lr: 0.0002
+    g_beta1: 0.5
+    g_beta2: 0.999
+  noise:
+    z_mean: 0.
+    z_var: 1.
+    batch_size_train: 128
+    batch_size_test: 128
+  inception_metric:
+    saved_inception_moments: ../results/datasets/Celeba_align64_inception_moments.npz
+    num_inception_images: 50000
+  dataset:
+    datadir: ~/.keras/celeba/
+    num_workers: 2
+  train_one_epoch:
+    dummy_train: false
+    gp_lambda: 10.
+    sinkhorn_bound: false
+    bound: 15
+    n_critic: 1
+    sample_every: 100
+    sample_start_iter: 20000
+    lambda_sinkhorn: 0
+    sinkhorn:
+      sinkhorn_eps: 0.01
+      sinkhorn_niter: 100
+      sinkhorn_pi_detach: false
+  test:
+    use_ema: false
+
+

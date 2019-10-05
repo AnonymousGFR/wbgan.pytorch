@@ -1,0 +1,4 @@
+EXPERIMENTS/results/
+.idea/
+.vscode/
+__pycache__/

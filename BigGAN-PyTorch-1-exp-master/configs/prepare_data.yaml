@@ -1,0 +1,28 @@
+Calculate_inception_moments_cifar10:
+  loader:
+    dataset: 'C10'
+    data_root: ~/.keras/cifar10
+    batch_size: 128
+    load_in_mem: true
+    augment: false
+    use_multiepoch_sampler: false
+    num_workers: 1
+    pin_memory: false
+    drop_last: false
+    shuffle: false
+  saved_inception_moments: '~/.keras/cifar10/cifar10_inception_moments.npz'
+  parallel: true
+  augment: false
+
+
+Calculate_inception_moments_Celeba64:
+  loader:
+    dataset: Celeba64
+    datadir: ~/.keras/celeba/
+    batch_size: 128
+    shuffle: false
+    num_workers: 6
+    seed: 0
+  saved_inception_moments: '~/.keras/BigGAN-PyTorch-1/Celeba64_inception_moments.npz'
+  parallel: true
+  augment: false

@@ -1,0 +1,4 @@
+Testing_Celeba64_DCGAN:
+  test_CelebA64_dcgan_wgan_gp
+    ☐ test
+      *test*

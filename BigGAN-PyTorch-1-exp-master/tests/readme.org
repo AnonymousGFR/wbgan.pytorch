@@ -1,0 +1,527 @@
+* Testing_Celeba64_DCGAN
+** test_CelebA64_dcgan_wgan_gpreal
+*** CANCELED results/DCGAN/test_CelebA64_dcgan_wgan_gpreal_20190807-21_07_41 :6007:
+    - State "CANCELED"   from "DONE!!!!"   [2019-08-08 Thu 12:40]
+    - State "DONE!!!!"   from "DOING"      [2019-08-08 Thu 12:40]
+    - State "DOING"      from "TODO"       [2019-08-07 Wed 21:20]
+    - State "TODO"       from              [2019-08-07 Wed 21:20]
+** test_CelebA64_dcgan_wbgan_gpreal
+*** CANCELED results/DCGAN/test_CelebA64_dcgan_wbgan_gpreal_20190807-21_17_35 :6109:
+    - State "CANCELED"   from "DONE!!!!"   [2019-08-08 Thu 12:41]
+    - State "DONE!!!!"   from "DOING"      [2019-08-08 Thu 12:41]
+    - State "DOING"      from "TODO"       [2019-08-07 Wed 21:21]
+    - State "TODO"       from              [2019-08-07 Wed 21:21]
+** test_CelebA64_dcgan_wgan_gpreal_adv
+*** CANCELED results/DCGAN/test_CelebA64_dcgan_wgan_gpreal_adv_20190808-00_03_59 :6009:adv_plus:
+    - State "CANCELED"   from "DONE!!!!"   [2019-08-08 Thu 12:41]
+    - State "DONE!!!!"   from "DOING"      [2019-08-08 Thu 12:41]
+    - State "DOING"      from "TODO"       [2019-08-08 Thu 00:10]
+    - State "TODO"       from              [2019-08-08 Thu 00:10]
+*** CANCELED results/DCGAN/test_CelebA64_dcgan_wgan_gpreal_adv_20190807-23_19_31 :6111:adv_minus:
+    - State "CANCELED"   from "DONE!!!!"   [2019-08-08 Thu 12:41]
+    - State "DONE!!!!"   from "DOING"      [2019-08-08 Thu 12:41]
+    - State "DOING"      from "TODO"       [2019-08-07 Wed 23:23]
+    - State "TODO"       from              [2019-08-07 Wed 23:23]
+*** CANCELED results/DCGAN/test_CelebA64_dcgan_wgan_gpreal_adv_20190808-10_02_43 :6010:
+    - State "CANCELED"   from "DONE!!!!"   [2019-08-08 Thu 12:41]
+    - State "DONE!!!!"   from "DOING"      [2019-08-08 Thu 12:41]
+    - State "DOING"      from "TODO"       [2019-08-08 Thu 10:24]
+    - State "TODO"       from              [2019-08-08 Thu 10:24]
+    - *n_critic=5*
+*** DONE!!!! results/DCGAN/test_CelebA64_dcgan_wgan_gpreal_adv_20190808-12_48_35
+    - bs: 2048
+    - State "DONE!!!!"   from "DOING"      [2019-08-09 Fri 14:12]
+    - State "DOING"      from "TODO"       [2019-08-09 Fri 14:12]
+    - State "TODO"       from              [2019-08-09 Fri 14:12]
+** test_CelebA64_dcgan_wbgan_gpreal_adv
+*** CANCELED results/DCGAN/test_CelebA64_dcgan_wbgan_gpreal_adv_20190807-22_53_21 :6106:adv_plus:
+    - State "CANCELED"   from "DONE!!!!"   [2019-08-08 Thu 12:41]
+    - State "DONE!!!!"   from "DOING"      [2019-08-08 Thu 12:41]
+    - State "DOING"      from "TODO"       [2019-08-07 Wed 23:13]
+    - State "TODO"       from              [2019-08-07 Wed 23:13]
+*** CANCELED results/DCGAN/test_CelebA64_dcgan_wbgan_gpreal_adv_20190807-23_21_38 :6008:adv_minus:
+    - State "CANCELED"   from "DONE!!!!"   [2019-08-08 Thu 12:41]
+    - State "DONE!!!!"   from "DOING"      [2019-08-08 Thu 12:41]
+    - State "DOING"      from "TODO"       [2019-08-07 Wed 23:24]
+    - State "TODO"       from              [2019-08-07 Wed 23:24]
+* test_cifar10_DCGAN
+** test_cifar10_dcgan_wgan_gp
+*** DONE!!!! results/DCGAN/test_cifar10_dcgan_wgan_gp_20190809-18_29_03
+    - State "DONE!!!!"   from "DOING"      [2019-08-10 Sat 00:39]
+    - State "DOING"      from "TODO"       [2019-08-09 Fri 19:10]
+    - State "TODO"       from              [2019-08-09 Fri 19:10]
+*** DONE!!!! results/DCGAN/test_cifar10_dcgan_wgan_gp_20190811-11_38_09 :6006:
+    - State "DONE!!!!"   from "DOING"      [2019-08-12 Mon 09:30]
+    - State "DOING"      from "TODO"       [2019-08-11 Sun 11:40]
+    - State "TODO"       from              [2019-08-11 Sun 11:40]
+    - *netD=resnet18*
+    - *FID=77.24*
+*** DONE!!!! results/DCGAN/test_cifar10_dcgan_wgan_gp_20190811-11_39_11 :6007:
+    - State "DONE!!!!"   from "DOING"      [2019-08-12 Mon 09:30]
+    - State "DOING"      from "TODO"       [2019-08-11 Sun 11:42]
+    - State "TODO"       from              [2019-08-11 Sun 11:42]
+    - *netD=resnet34*
+    - *FID=60.69*
+*** DONE!!!! results/DCGAN/test_cifar10_dcgan_wgan_gp_20190811-11_44_02 :6008:
+    - State "DONE!!!!"   from "DOING"      [2019-08-12 Mon 14:44]
+    - State "DOING"      from "TODO"       [2019-08-11 Sun 11:45]
+    - State "TODO"       from              [2019-08-11 Sun 11:45]
+    - *netD=resnet50*
+    - *FID=56.46*
+*** DONE!!!! results/DCGAN/test_cifar10_dcgan_wgan_gp_20190811-11_45_34 :6009:
+    - State "DONE!!!!"   from "DOING"      [2019-08-12 Mon 22:19]
+    - State "DOING"      from "TODO"       [2019-08-11 Sun 11:48]
+    - State "TODO"       from              [2019-08-11 Sun 11:48]
+    - *netD=resnet101*
+    - *FID=58.73*
+*** CANCELED results/DCGAN/test_cifar10_dcgan_wgan_gp_20190811-13_15_47 :6106:
+    - State "CANCELED"   from "DONE!!!!"   [2019-08-11 Sun 23:37]
+    - State "DONE!!!!"   from "DOING"      [2019-08-11 Sun 23:37]
+    - State "DOING"      from "TODO"       [2019-08-11 Sun 13:19]
+    - State "TODO"       from              [2019-08-11 Sun 13:19]
+    - *netD=darts_nopretrain*
+*** CANCELED results/DCGAN/test_cifar10_dcgan_wgan_gp_20190811-13_36_48 :6109:
+    - State "CANCELED"   from "DONE!!!!"   [2019-08-12 Mon 00:13]
+    - State "DONE!!!!"   from "DOING"      [2019-08-12 Mon 00:13]
+    - State "DOING"      from "TODO"       [2019-08-11 Sun 13:40]
+    - State "TODO"       from              [2019-08-11 Sun 13:40]
+    - *netD=darts_pretrain*
+** test_cifar10_dcgan_wgan_gp_adv
+*** DONE!!!! results/temp_20190809-18_25_09
+    - State "DONE!!!!"   from "DOING"      [2019-08-10 Sat 10:13]
+    - State "DOING"      from "TODO"       [2019-08-09 Fri 19:11]
+    - State "TODO"       from              [2019-08-09 Fri 19:11]
+*** CANCELED results/DCGAN/test_cifar10_dcgan_wgan_gp_adv_20190811-17_52_53 :6108:
+    - State "CANCELED"   from "DONE!!!!"   [2019-08-11 Sun 20:47]
+    - State "DONE!!!!"   from "DOING"      [2019-08-11 Sun 20:47]
+    - State "DOING"      from "TODO"       [2019-08-11 Sun 17:56]
+    - State "TODO"       from              [2019-08-11 Sun 17:56]
+    - *netD=resnet18*
+** test_cifar10_dcgan_wgan_gpreal
+*** DONE!!!! results/DCGAN/test_cifar10_dcgan_wgan_gpreal_20190809-16_03_15 :6107:
+    - State "DONE!!!!"   from "DOING"      [2019-08-10 Sat 10:29]
+    - State "DOING"      from "TODO"       [2019-08-09 Fri 16:04]
+    - State "TODO"       from              [2019-08-09 Fri 16:04]
+** test_cifar10_dcgan_wgan_gpreal_adv
+*** DONE!!!! results/DCGAN/test_cifar10_dcgan_wgan_gpreal_adv_20190809-15_02_36 :6106:
+    - State "DONE!!!!"   from "DOING"      [2019-08-10 Sat 10:34]
+    - State "DOING"      from "TODO"       [2019-08-09 Fri 16:05]
+    - State "TODO"       from              [2019-08-09 Fri 16:05]
+    - *adv_lr=0.01, gp_lambda=10, sign, adv_minus*
+*** DONE!!!! results/DCGAN/test_cifar10_dcgan_wgan_gpreal_adv_20190809-17_34_55 :6109:
+    - State "DONE!!!!"   from "DOING"      [2019-08-10 Sat 12:54]
+    - State "DOING"      from "TODO"       [2019-08-09 Fri 19:05]
+    - State "TODO"       from              [2019-08-09 Fri 19:05]
+    - *netD: inception_v3*
+*** DONE!!!! results/DCGAN/test_cifar10_dcgan_wgan_gpreal_adv_20190810-00_09_02 :6006:
+    - State "DONE!!!!"   from "DOING"      [2019-08-10 Sat 14:32]
+    - State "DOING"      from "TODO"       [2019-08-10 Sat 00:10]
+    - State "TODO"       from              [2019-08-10 Sat 00:10]
+    - *adv_lr: 0.001, FID=70.97*
+*** DONE!!!! results/DCGAN/test_cifar10_dcgan_wgan_gpreal_adv_20190810-00_12_18 :6007:
+    - State "DONE!!!!"   from "DOING"      [2019-08-10 Sat 14:44]
+    - State "DOING"      from "TODO"       [2019-08-10 Sat 00:13]
+    - State "TODO"       from              [2019-08-10 Sat 00:13]
+    - *adv_lr: 0.1 FID=63.22*
+*** DONE!!!! results/DCGAN/test_cifar10_dcgan_wgan_gpreal_adv_20190810-00_14_17 :6008:
+    - State "DONE!!!!"   from "DOING"      [2019-08-10 Sat 14:53]
+    - State "DOING"      from "TODO"       [2019-08-10 Sat 00:15]
+    - State "TODO"       from              [2019-08-10 Sat 00:15]
+    - *adv_lr: 1, FID=77.79*
+*** DONE!!!! results/DCGAN/test_cifar10_dcgan_wgan_gpreal_adv_20190810-00_16_44 :6009:
+    - State "DONE!!!!"   from "DOING"      [2019-08-10 Sat 15:00]
+    - State "DOING"      from "TODO"       [2019-08-10 Sat 00:18]
+    - State "TODO"       from              [2019-08-10 Sat 00:18]
+    - *adv_lr: 10, FID=60.98*
+*** CANCELED results/DCGAN/test_cifar10_dcgan_wgan_gpreal_adv_20190810-00_22_24 :6010:
+    - State "CANCELED"   from "DONE!!!!"   [2019-08-10 Sat 09:46]
+    - State "DONE!!!!"   from "DOING"      [2019-08-10 Sat 09:46]
+    - State "DOING"      from "TODO"       [2019-08-10 Sat 00:23]
+    - State "TODO"       from              [2019-08-10 Sat 00:23]
+    - *adv_lr: 0.01, gp_lambda: 0*
+*** CANCELED results/DCGAN/test_cifar10_dcgan_wgan_gpreal_adv_20190810-00_25_06 :6011:
+    - State "CANCELED"   from "DONE!!!!"   [2019-08-10 Sat 01:26]
+    - State "DONE!!!!"   from "DOING"      [2019-08-10 Sat 01:26]
+    - State "DOING"      from "TODO"       [2019-08-10 Sat 00:26]
+    - State "TODO"       from              [2019-08-10 Sat 00:26]
+    - *adv_lr: 0.1, gp_lambda: 0*
+*** CANCELED results/DCGAN/test_cifar10_dcgan_wgan_gpreal_adv_20190810-00_41_13 :6111:
+    - State "CANCELED"   from "DONE!!!!"   [2019-08-10 Sat 09:44]
+    - State "DONE!!!!"   from "DOING"      [2019-08-10 Sat 09:44]
+    - State "DOING"      from "TODO"       [2019-08-10 Sat 00:43]
+    - State "TODO"       from              [2019-08-10 Sat 00:43]
+    - *adv_lr: 0.01, gp_lambda: 0, no sign*
+*** CANCELED results/DCGAN/test_cifar10_dcgan_wgan_gpreal_adv_20190810-01_28_17 :6011:
+    - State "CANCELED"   from "DONE!!!!"   [2019-08-10 Sat 09:55]
+    - State "DONE!!!!"   from "DOING"      [2019-08-10 Sat 09:55]
+    - State "DOING"      from "TODO"       [2019-08-10 Sat 01:30]
+    - State "TODO"       from              [2019-08-10 Sat 01:30]
+    - *adv_lr=0.1, gp_lambda=0, no sign*
+*** DONE!!!! results/DCGAN/test_cifar10_dcgan_wgan_gpreal_adv_20190810-10_15_01 :6110:
+    - State "DONE!!!!"   from "DOING"      [2019-08-11 Sun 01:11]
+    - State "DOING"      from "TODO"       [2019-08-10 Sat 10:16]
+    - State "TODO"       from              [2019-08-10 Sat 10:16]
+    - *adv_lr=0.0001, gp_lambda=0, no sign, adv_plus, FID=36.31*
+*** DONE!!!! results/DCGAN/test_cifar10_dcgan_wgan_gpreal_adv_20190810-09_54_41 :6111:
+    - State "DONE!!!!"   from "DOING"      [2019-08-11 Sun 01:36]
+    - State "DOING"      from "TODO"       [2019-08-10 Sat 09:57]
+    - State "TODO"       from              [2019-08-10 Sat 09:57]
+    - *adv_lr=0.001, gp_lambda=0, no sign, adv_plus, FID=41.33*
+*** DONE!!!! results/DCGAN/test_cifar10_dcgan_wgan_gpreal_adv_20190810-09_59_39 :6011:
+    - State "DONE!!!!"   from "DOING"      [2019-08-11 Sun 01:44]
+    - State "DOING"      from "TODO"       [2019-08-10 Sat 10:02]
+    - State "TODO"       from              [2019-08-10 Sat 10:02]
+    - *adv_lr=0.01, gp_lambda=0, no sign, adv_plus, FID=39.17*
+*** CANCELED results/DCGAN/test_cifar10_dcgan_wgan_gpreal_adv_20190810-10_04_47 :6010:
+    - State "CANCELED"   from "DONE!!!!"   [2019-08-10 Sat 13:41]
+    - State "DONE!!!!"   from "DOING"      [2019-08-10 Sat 13:41]
+    - State "DOING"      from "TODO"       [2019-08-10 Sat 10:05]
+    - State "TODO"       from              [2019-08-10 Sat 10:05]
+    - *adv_lr=0.1, gp_lambda=0, no sign, adv_plus*
+*** CANCELED results/DCGAN/test_cifar10_dcgan_wgan_gpreal_adv_20190810-10_23_32 :6108:
+    - State "CANCELED"   from "DONE!!!!"   [2019-08-11 Sun 11:24]
+    - State "DONE!!!!"   from "DOING"      [2019-08-11 Sun 11:24]
+    - State "DOING"      from "TODO"       [2019-08-10 Sat 10:25]
+    - State "TODO"       from              [2019-08-10 Sat 10:25]
+    - *adv_lr=0.0001, gp_lambda=0, no sign, adv_plus, D_net: inception_v3*
+*** CANCELED results/DCGAN/test_cifar10_dcgan_wgan_gpreal_adv_20190810-10_31_22 :6107:
+    - State "CANCELED"   from "DONE!!!!"   [2019-08-10 Sat 11:38]
+    - State "DONE!!!!"   from "DOING"      [2019-08-10 Sat 11:38]
+    - State "DOING"      from "TODO"       [2019-08-10 Sat 10:32]
+    - State "TODO"       from              [2019-08-10 Sat 10:32]
+    - *adv_lr=0.001, gp_lambda=0, no sign, adv_plus, D_net: inception_v3*
+*** CANCELED results/DCGAN/test_cifar10_dcgan_wgan_gpreal_adv_20190810-10_36_26 :6106:
+    - State "CANCELED"   from "DONE!!!!"   [2019-08-10 Sat 11:11]
+    - State "DONE!!!!"   from "DOING"      [2019-08-10 Sat 11:11]
+    - State "DOING"      from "TODO"       [2019-08-10 Sat 10:38]
+    - State "TODO"       from              [2019-08-10 Sat 10:38]
+    - *adv_lr=0.01, gp_lambda=0, no sign, adv_plus, D_net: inception_v3*
+*** DONE!!!! results/DCGAN/test_cifar10_dcgan_wgan_gpreal_adv_20190810-11_22_18 :6106:
+    - State "DONE!!!!"   from "DOING"      [2019-08-11 Sun 11:16]
+    - State "DOING"      from "TODO"       [2019-08-10 Sat 11:24]
+    - State "TODO"       from              [2019-08-10 Sat 11:24]
+    - *adv_lr=0.01, gp_lambda=10, no sign, adv_plus, D_net: inception_v3, adaptive_gp, FID=95.20*
+*** CANCELED results/DCGAN/test_cifar10_dcgan_wgan_gpreal_adv_20190810-11_39_44 :6107:
+    - State "CANCELED"   from "DONE!!!!"   [2019-08-10 Sat 12:04]
+    - State "DONE!!!!"   from "DOING"      [2019-08-10 Sat 12:04]
+    - State "DOING"      from "TODO"       [2019-08-10 Sat 11:41]
+    - State "TODO"       from              [2019-08-10 Sat 11:41]
+    - *adv_lr=0.01, gp_lambda=1, no sign, adv_plus, D_net: inception_v3, adaptive_gp*
+*** DONE!!!! results/DCGAN/test_cifar10_dcgan_wgan_gpreal_adv_20190810-11_42_37 :6108:
+    - State "DONE!!!!"   from "DOING"      [2019-08-11 Sun 11:14]
+    - State "DOING"      from "TODO"       [2019-08-10 Sat 11:44]
+    - State "TODO"       from              [2019-08-10 Sat 11:44]
+    - *adv_lr=0.001, gp_lambda=1, no sign, adv_plus, D_net: inception_v3, adaptive_gp, FID=82.57*
+*** DONE!!!! results/DCGAN/test_cifar10_dcgan_wgan_gpreal_adv_20190810-12_04_26 :6107:
+    - State "DONE!!!!"   from "DOING"      [2019-08-11 Sun 11:16]
+    - State "DOING"      from "TODO"       [2019-08-10 Sat 12:07]
+    - State "TODO"       from              [2019-08-10 Sat 12:07]
+    - *adv_lr=0.001, gp_lambda=10, no sign, adv_plus, D_net: inception_v3, adaptive_gp, FID=94.46*
+*** DONE!!!! results/DCGAN/test_cifar10_dcgan_wgan_gpreal_adv_20190810-12_57_12 :6109:
+    - State "DONE!!!!"   from "DOING"      [2019-08-11 Sun 11:17]
+    - State "DOING"      from "TODO"       [2019-08-10 Sat 13:02]
+    - State "TODO"       from              [2019-08-10 Sat 13:02]
+    - *adv_lr=0.1, gp_lambda=10, no sign, adv_plus, D_net: inception_v3, adaptive_gp, FID=93.35*
+*** DONE!!!! results/DCGAN/test_cifar10_dcgan_wgan_gpreal_adv_20190810-13_44_27 :6010:
+    - State "DONE!!!!"   from "DOING"      [2019-08-11 Sun 11:19]
+    - State "DOING"      from "TODO"       [2019-08-10 Sat 13:50]
+    - State "TODO"       from              [2019-08-10 Sat 13:50]
+    - *gp_lambda=10, D_net: inception_v3, FID=136.9*
+*** DONE!!!! results/DCGAN/test_cifar10_dcgan_wgan_gpreal_adv_20190810-14_35_23 :6006:
+    - State "DONE!!!!"   from "DOING"      [2019-08-11 Sun 11:21]
+    - State "DOING"      from "TODO"       [2019-08-10 Sat 14:39]
+    - State "TODO"       from              [2019-08-10 Sat 14:39]
+    - *gp_lambda=10, D_net: inception_v3, adaptive_gp, FID=84.77*
+*** DONE!!!! results/DCGAN/test_cifar10_dcgan_wgan_gpreal_adv_20190810-14_46_37 :6007:
+    - State "DONE!!!!"   from "DOING"      [2019-08-11 Sun 11:10]
+    - State "DOING"      from "TODO"       [2019-08-10 Sat 14:49]
+    - State "TODO"       from              [2019-08-10 Sat 14:49]
+    - *adv_lr=0.1, gp_lambda=10, no sign, adv_plus, D_net: dcgan, adaptive_gp, FID=24.05*
+*** DONE!!!! results/DCGAN/test_cifar10_dcgan_wgan_gpreal_adv_20190810-14_54_37 :6008:
+    - State "DONE!!!!"   from "DOING"      [2019-08-11 Sun 11:11]
+    - State "DOING"      from "TODO"       [2019-08-10 Sat 14:56]
+    - State "TODO"       from              [2019-08-10 Sat 14:56]
+    - *adv_lr=0.01, gp_lambda=10, no sign, adv_plus, D_net: dcgan, adaptive_gp, FID=31.46*
+*** DONE!!!! results/DCGAN/test_cifar10_dcgan_wgan_gpreal_adv_20190810-15_37_29 :6009:
+    - State "DONE!!!!"   from "DOING"      [2019-08-11 Sun 11:12]
+    - State "DOING"      from "TODO"       [2019-08-10 Sat 15:39]
+    - State "TODO"       from              [2019-08-10 Sat 15:39]
+    - *adv_lr=0.1, gp_lambda=10, no sign, adv_plus, D_net: resnet18, adaptive_gp, FID=119.78*
+*** DONE!!!! results/DCGAN/test_cifar10_dcgan_wgan_gpreal_adv_20190811-02_03_35 :6110:
+    - State "DONE!!!!"   from "DOING"      [2019-08-12 Mon 09:24]
+    - State "DOING"      from "TODO"       [2019-08-11 Sun 02:05]
+    - State "TODO"       from              [2019-08-11 Sun 02:05]
+    - *adv_lr=0.1, gp_lambda=10, no sign, adv_plus, D_net: resnet34, adaptive_gp*
+    - *FID=58.24*
+*** DONE!!!! results/DCGAN/test_cifar10_dcgan_wgan_gpreal_adv_20190811-01_55_52 :6011:
+    - State "DONE!!!!"   from "DOING"      [2019-08-12 Mon 09:27]
+    - State "DOING"      from "TODO"       [2019-08-11 Sun 01:58]
+    - State "TODO"       from              [2019-08-11 Sun 01:58]
+    - *adv_lr=0.1, gp_lambda=10, no sign, adv_plus, D_net: resnet50, adaptive_gp*
+    - *FID=48.12*
+*** DONE!!!! results/DCGAN/test_cifar10_dcgan_wgan_gpreal_adv_20190811-02_01_15 :6111:
+    - State "DONE!!!!"   from "DOING"      [2019-08-12 Mon 22:17]
+    - State "DOING"      from "TODO"       [2019-08-11 Sun 02:04]
+    - State "TODO"       from              [2019-08-11 Sun 02:04]
+    - *adv_lr=0.1, gp_lambda=10, no sign, adv_plus, D_net: resnet101, adaptive_gp*
+    - *FID=58.23*
+*** CANCELED results/DCGAN/test_cifar10_dcgan_wgan_gpreal_adv_20190811-13_23_05 :6107:
+    - State "CANCELED"   from "DONE!!!!"   [2019-08-12 Mon 09:34]
+    - State "DONE!!!!"   from "DOING"      [2019-08-12 Mon 09:34]
+    - State "DOING"      from "TODO"       [2019-08-11 Sun 13:27]
+    - State "TODO"       from              [2019-08-11 Sun 13:27]
+    - *adv_lr=0.1, gp_lambda=10, no sign, adv_plus, D_net: darts_nopretrain, adaptive_gp*
+*** CANCELED results/DCGAN/test_cifar10_dcgan_wgan_gpreal_adv_20190811-13_33_55 :6108:
+    - State "CANCELED"   from "DONE!!!!"   [2019-08-11 Sun 17:53]
+    - State "DONE!!!!"   from "DOING"      [2019-08-11 Sun 17:53]
+    - State "DOING"      from "TODO"       [2019-08-11 Sun 13:37]
+    - State "TODO"       from              [2019-08-11 Sun 13:37]
+    - *adv_lr=0.1, gp_lambda=10, no sign, adv_plus, D_net: darts_pretrain, adaptive_gp*
+*** CANCELED results/DCGAN/test_cifar10_dcgan_wgan_gpreal_adv_20190811-21_30_31 :6108:
+    - State "CANCELED"   from "DONE!!!!"   [2019-08-12 Mon 00:01]
+    - State "DONE!!!!"   from "DOING"      [2019-08-12 Mon 00:01]
+    - State "DOING"      from "TODO"       [2019-08-11 Sun 21:32]
+    - State "TODO"       from              [2019-08-11 Sun 21:32]
+    - *D_net: darts_pretrain, layers=3, init_channels=16*
+*** DONE!!!! results/DCGAN/test_cifar10_dcgan_wgan_gpreal_adv_20190811-23_38_58 :6106:
+    - State "DONE!!!!"   from "DOING"      [2019-08-12 Mon 14:42]
+    - State "DOING"      from "TODO"       [2019-08-12 Mon 00:00]
+    - State "TODO"       from              [2019-08-12 Mon 00:00]
+    - *D_net: dcgan, n_critic=5*
+    - *FID=23.9*
+*** CANCELED results/DCGAN/test_cifar10_dcgan_wgan_gpreal_adv_20190812-00_03_46 :6108:
+    - State "CANCELED"   from "DONE!!!!"   [2019-08-12 Mon 09:34]
+    - State "DONE!!!!"   from "DOING"      [2019-08-12 Mon 09:34]
+    - State "DOING"      from "TODO"       [2019-08-12 Mon 00:07]
+    - State "TODO"       from              [2019-08-12 Mon 00:07]
+    - *D_net: darts_pretrain, gp_lambda=0, n_critic=5*
+*** CANCELED results/DCGAN/test_cifar10_dcgan_wgan_gpreal_adv_20190812-00_14_28 :6109:
+    - State "CANCELED"   from "DONE!!!!"   [2019-08-12 Mon 09:35]
+    - State "DONE!!!!"   from "DOING"      [2019-08-12 Mon 09:35]
+    - State "DOING"      from "TODO"       [2019-08-12 Mon 00:17]
+    - State "TODO"       from              [2019-08-12 Mon 00:17]
+    - *D_net: darts_pretrain, gp_lambda=0, n_critic=1*
+*** CANCELED results/DCGAN/test_cifar10_dcgan_wgan_gpreal_adv_20190812-15_04_01 :6106:
+    - State "CANCELED"   from "DONE!!!!"   [2019-08-13 Tue 08:45]
+    - State "DONE!!!!"   from "DOING"      [2019-08-13 Tue 08:45]
+    - State "DOING"      from "TODO"       [2019-08-12 Mon 15:20]
+    - State "TODO"       from              [2019-08-12 Mon 15:20]
+    - *D_net: darts, adv_value=1, n_critic=1*
+*** CANCELED results/DCGAN/test_cifar10_dcgan_wgan_gpreal_adv_20190812-15_17_39 :6107:
+    - State "CANCELED"   from "DONE!!!!"   [2019-08-13 Tue 08:45]
+    - State "DONE!!!!"   from "DOING"      [2019-08-13 Tue 08:45]
+    - State "DOING"      from "TODO"       [2019-08-12 Mon 15:21]
+    - State "TODO"       from              [2019-08-12 Mon 15:21]
+    - *D_net: darts, adv_value=1, n_critic=5*
+* Testing_train_BigGAN_cifar10
+** test_cifar10_wgan_gpreal
+*** CANCELED results/BigGAN_cifar10/test_cifar10_wgan_gpreal_20190813-10_20_41 :6006:
+    - State "CANCELED"   from "DONE!!!!"   [2019-08-13 Tue 16:54]
+    - State "DONE!!!!"   from "DOING"      [2019-08-13 Tue 16:54]
+    - State "DOING"      from "TODO"       [2019-08-13 Tue 10:26]
+    - State "TODO"       from              [2019-08-13 Tue 10:26]
+    - *ch=32*
+*** CANCELED results/BigGAN_cifar10/test_cifar10_wgan_gpreal_20190813-11_26_43 :6010:
+    - State "CANCELED"   from "DONE!!!!"   [2019-08-13 Tue 17:06]
+    - State "DONE!!!!"   from "DOING"      [2019-08-13 Tue 17:06]
+    - State "DOING"      from "TODO"       [2019-08-13 Tue 11:30]
+    - State "TODO"       from              [2019-08-13 Tue 11:30]
+    - *ch=64*
+*** CANCELED results/BigGAN_cifar10/test_cifar10_wgan_gpreal_20190813-11_32_21 :6106:
+    - State "CANCELED"   from "DONE!!!!"   [2019-08-13 Tue 16:20]
+    - State "DONE!!!!"   from "DOING"      [2019-08-13 Tue 16:20]
+    - State "DOING"      from "TODO"       [2019-08-13 Tue 11:34]
+    - State "TODO"       from              [2019-08-13 Tue 11:34]
+    - *ch=16*
+*** CANCELED results/BigGAN_cifar10/test_cifar10_wgan_gpreal_20190813-11_44_44 :6107:
+    - State "CANCELED"   from "DONE!!!!"   [2019-08-13 Tue 15:09]
+    - State "DONE!!!!"   from "DOING"      [2019-08-13 Tue 15:09]
+    - State "DOING"      from "TODO"       [2019-08-13 Tue 11:48]
+    - State "TODO"       from              [2019-08-13 Tue 11:48]
+    - *ch=8*
+** test_cifar10_wgan_gpreal_adv
+*** CANCELED results/BigGAN_cifar10/test_cifar10_wgan_gpreal_adv_20190813-10_51_24 :6007:
+    - State "CANCELED"   from "DONE!!!!"   [2019-08-13 Tue 21:40]
+    - State "DONE!!!!"   from "DOING"      [2019-08-13 Tue 21:40]
+    - State "DOING"      from "TODO"       [2019-08-13 Tue 10:58]
+    - State "TODO"       from              [2019-08-13 Tue 10:58]
+    - *D_step=1*
+*** DONE!!!! results/BigGAN_cifar10/test_cifar10_wgan_gpreal_adv_20190813-10_59_31 :6008:
+    - State "DONE!!!!"   from "DOING"      [2019-08-14 Wed 00:31]
+    - State "DOING"      from "TODO"       [2019-08-13 Tue 11:03]
+    - State "TODO"       from              [2019-08-13 Tue 11:03]
+    - *D_step=5*
+    - *FID=17.34*
+*** DONE!!!! results/BigGAN_cifar10/test_cifar10_wgan_gpreal_adv_20190813-11_14_46 :6009:
+    - State "DONE!!!!"   from "DOING"      [2019-08-14 Wed 00:38]
+    - State "DOING"      from "TODO"       [2019-08-13 Tue 11:21]
+    - State "TODO"       from              [2019-08-13 Tue 11:21]
+    - *D_step=5, adv_value=1*
+    - *FID=17.80*
+*** CANCELED results/BigGAN_cifar10/test_cifar10_wgan_gpreal_adv_20190813-13_51_43 :6108:
+    - State "CANCELED"   from "DONE!!!!"   [2019-08-13 Tue 17:28]
+    - State "DONE!!!!"   from "DOING"      [2019-08-13 Tue 17:28]
+    - State "DOING"      from "TODO"       [2019-08-13 Tue 14:05]
+    - State "TODO"       from              [2019-08-13 Tue 14:05]
+    - *D_step=5, gp_lambda=0*
+*** DONE!!!! results/BigGAN_cifar10/test_cifar10_wgan_gpreal_adv_20190813-17_28_29 :6108:
+    - State "DONE!!!!"   from "DOING"      [2019-08-14 Wed 09:36]
+    - State "DOING"      from "TODO"       [2019-08-13 Tue 19:03]
+    - State "TODO"       from              [2019-08-13 Tue 19:03]
+    - *D_step=5, gp_lambda=0, bound=10*
+    - *FID=26.31*
+** test_cifar10_wgan_gp
+*** CANCELED results/BigGAN_cifar10/test_cifar10_wgan_gp_20190813-21_43_08 :6007:
+    - State "CANCELED"   from "DONE!!!!"   [2019-08-13 Tue 23:10]
+    - State "DONE!!!!"   from "DOING"      [2019-08-13 Tue 23:10]
+    - State "DOING"      from "TODO"       [2019-08-13 Tue 21:50]
+    - State "TODO"       from              [2019-08-13 Tue 21:50]
+    - *D_step=1, gp_lambda=10*
+* Testing_train_BigGAN_CelebaHQ128
+** test_celebahq128_wgan_gp
+*** DONE!!!! results/BigGAN_celebahq128/test_celebahq128_wgan_gp_20190813-23_11_20 :6007:
+    - State "DONE!!!!"   from "DOING"      [2019-08-15 Thu 00:36]
+    - State "DOING"      from "TODO"       [2019-08-13 Tue 23:12]
+    - State "TODO"       from              [2019-08-13 Tue 23:12]
+    - *D_step=1, gp_lambda=10*
+    - *FID=20.94*
+*** DONE!!!! results/BigGAN_celebahq128/test_celebahq128_wgan_gp_20190813-23_16_34 :6011:
+    - State "DONE!!!!"   from "DOING"      [2019-08-14 Wed 21:34]
+    - State "DOING"      from "TODO"       [2019-08-13 Tue 23:14]
+    - State "TODO"       from              [2019-08-13 Tue 23:14]
+    - *D_step=5, gp_lambda=10*
+    - *FID=19.24*
+** test_celebahq128_wgan_gpreal
+*** DONE!!!! results/BigGAN_celebahq128/test_celebahq128_wgan_gpreal_20190816-09_49_45 :6006:
+    - State "DONE!!!!"   from "DOING"      [2019-08-19 Mon 08:26]
+    - State "DOING"      from "TODO"       [2019-08-16 Fri 09:55]
+    - State "TODO"       from              [2019-08-16 Fri 09:55]
+    - *FID=13.20*
+*** DONE!!!! results/BigGAN_celebahq128/test_celebahq128_wgan_gpreal_20190816-10_30_20 :6106:
+    - State "DONE!!!!"   from "DOING"      [2019-08-19 Mon 08:34]
+    - State "DOING"      from "TODO"       [2019-08-16 Fri 10:31]
+    - State "TODO"       from              [2019-08-16 Fri 10:31]
+    - *adv_train=true, adv_lambda=0.001*
+    - *FID=12.66*
+*** DONE!!!! results/BigGAN_celebahq128/test_celebahq128_wgan_gpreal_20190817-02_15_09 :6108:
+    - State "DONE!!!!"   from "DOING"      [2019-08-19 Mon 08:32]
+    - State "DOING"      from "TODO"       [2019-08-17 Sat 02:19]
+    - State "TODO"       from              [2019-08-17 Sat 02:19]
+    - *optim=radam*
+    - *FID=9.60*
+*** DONE!!!! results/BigGAN_celebahq128/test_celebahq128_wgan_gpreal_20190817-02_20_39 :6011:
+    - State "DONE!!!!"   from "DOING"      [2019-08-19 Mon 08:33]
+    - State "DOING"      from "TODO"       [2019-08-17 Sat 02:21]
+    - State "TODO"       from              [2019-08-17 Sat 02:21]
+    - *optim=radam, D_step=5*
+    - *FID=18.21*
+** test_celebahq128_wgan_gpreal_bound
+*** DONE!!!! results/BigGAN_celebahq128/test_celebahq128_wgan_gpreal_20190816-10_07_51 :6010:
+    - State "DONE!!!!"   from "DOING"      [2019-08-19 Mon 08:27]
+    - State "DOING"      from "TODO"       [2019-08-16 Fri 10:15]
+    - State "TODO"       from              [2019-08-16 Fri 10:15]
+    - *bound=3*
+    - *FID=13.23*
+*** DONE!!!! results/BigGAN_celebahq128/test_celebahq128_wgan_gpreal_bound_20190816-13_58_28 :6009:
+    - State "DONE!!!!"   from "DOING"      [2019-08-19 Mon 08:34]
+    - State "DOING"      from "TODO"       [2019-08-16 Fri 14:02]
+    - State "TODO"       from              [2019-08-16 Fri 14:02]
+    - *bound=3*
+    - *FID=12.79*
+** test_celebahq128_wgan_gpreal_adv
+*** CANCELED results/BigGAN_celebahq128/test_celebahq128_wgan_gpreal_adv_20190814-00_32_13 :6008:
+    - State "CANCELED"   from "DONE!!!!"   [2019-08-14 Wed 23:02]
+    - State "DONE!!!!"   from "DOING"      [2019-08-14 Wed 23:02]
+    - State "DOING"      from "TODO"       [2019-08-14 Wed 00:33]
+    - State "TODO"       from              [2019-08-14 Wed 00:33]
+    - *D_step=1, gp_lambda=10*
+*** CANCELED results/BigGAN_celebahq128/test_celebahq128_wgan_gpreal_adv_20190814-00_39_10 :6009:
+    - State "CANCELED"   from "DONE!!!!"   [2019-08-14 Wed 02:54]
+    - State "DONE!!!!"   from "DOING"      [2019-08-14 Wed 02:54]
+    - State "DOING"      from "TODO"       [2019-08-14 Wed 00:41]
+    - State "TODO"       from              [2019-08-14 Wed 00:41]
+    - *D_step=5, gp_lambda=10*
+*** CANCELED results/BigGAN_celebahq128/test_celebahq128_wgan_gpreal_adv_20190814-02_38_48 :6006:
+    - State "CANCELED"   from "DONE!!!!"   [2019-08-14 Wed 10:04]
+    - State "DONE!!!!"   from "DOING"      [2019-08-14 Wed 10:04]
+    - State "DOING"      from "TODO"       [2019-08-14 Wed 02:39]
+    - State "TODO"       from              [2019-08-14 Wed 02:39]
+    - *D_step=1, gp_lambda=10, gp_value=1*
+*** CANCELED results/BigGAN_celebahq128/test_celebahq128_wgan_gpreal_adv_20190814-02_46_21 :6106:
+    - State "CANCELED"   from "DONE!!!!"   [2019-08-14 Wed 10:12]
+    - State "DONE!!!!"   from "DOING"      [2019-08-14 Wed 10:12]
+    - State "DOING"      from "TODO"       [2019-08-14 Wed 02:47]
+    - State "TODO"       from              [2019-08-14 Wed 02:47]
+    - *D_step=5, gp_lambda=10, gp_value=1*
+*** CANCELED results/BigGAN_celebahq128/test_celebahq128_wgan_gpreal_adv_20190814-03_00_17 :6009:
+    - State "CANCELED"   from "DONE!!!!"   [2019-08-14 Wed 17:36]
+    - State "DONE!!!!"   from "DOING"      [2019-08-14 Wed 17:36]
+    - State "DOING"      from "TODO"       [2019-08-14 Wed 03:08]
+    - State "TODO"       from              [2019-08-14 Wed 03:08]
+    - *D_step=1, gp_lambda=10, gp_value=none, G_ch=16, D_ch=32*
+*** CANCELED results/BigGAN_celebahq128/test_celebahq128_wgan_gpreal_adv_20190814-09_54_52 :6108:
+    - State "CANCELED"   from "DONE!!!!"   [2019-08-15 Thu 00:39]
+    - State "DONE!!!!"   from "DOING"      [2019-08-15 Thu 00:39]
+    - State "DOING"      from "TODO"       [2019-08-14 Wed 09:59]
+    - State "TODO"       from              [2019-08-14 Wed 09:59]
+    - *D_step=1, gp_lambda=10, gp_value=none, G_ch=16, D_ch=16, adv_lambda=0.1*
+*** CANCELED results/BigGAN_celebahq128/test_celebahq128_wgan_gpreal_adv_20190814-10_04_55 :6006:
+    - State "CANCELED"   from "DONE!!!!"   [2019-08-14 Wed 17:44]
+    - State "DONE!!!!"   from "DOING"      [2019-08-14 Wed 17:44]
+    - State "DOING"      from "TODO"       [2019-08-14 Wed 10:09]
+    - State "TODO"       from              [2019-08-14 Wed 10:09]
+    - *D_step=1, gp_lambda=10, gp_value=none, G_ch=16, D_ch=16, adv_lambda=0.01*
+*** DONE!!!! results/BigGAN_celebahq128/test_celebahq128_wgan_gpreal_adv_20190814-10_13_31 :6106:
+    - State "DONE!!!!"   from "DOING"      [2019-08-15 Thu 10:24]
+    - State "DOING"      from "TODO"       [2019-08-14 Wed 10:14]
+    - State "TODO"       from              [2019-08-14 Wed 10:14]
+    - *D_step=1, gp_lambda=10, gp_value=none, G_ch=16, D_ch=16, adv_lambda=0.001*
+    - *18.97*
+*** DONE!!!! results/BigGAN_celebahq128/test_celebahq128_wgan_gpreal_adv_20190814-17_37_44 :6009:
+    - State "DONE!!!!"   from "DOING"      [2019-08-16 Fri 13:43]
+    - State "DOING"      from "TODO"       [2019-08-14 Wed 17:38]
+    - State "TODO"       from              [2019-08-14 Wed 17:38]
+    - *D_step=1, gp_lambda=10, gp_value=none, G_ch=32, D_ch=32, adv_lambda=0.1*
+    - *FID=17.87*
+*** DONE!!!! results/BigGAN_celebahq128/test_celebahq128_wgan_gpreal_adv_20190814-17_45_21 :6006:
+    - State "DONE!!!!"   from "DOING"      [2019-08-16 Fri 09:16]
+    - State "DOING"      from "TODO"       [2019-08-14 Wed 17:46]
+    - State "TODO"       from              [2019-08-14 Wed 17:46]
+    - *D_step=5, gp_lambda=10, gp_value=none, G_ch=32, D_ch=32, adv_lambda=0.1*
+    - *FID=22.92*
+*** DONE!!!! results/BigGAN_celebahq128/test_celebahq128_wgan_gpreal_adv_20190814-21_38_42 :6011:
+    - State "DONE!!!!"   from "DOING"      [2019-08-16 Fri 18:09]
+    - State "DOING"      from "TODO"       [2019-08-14 Wed 22:09]
+    - State "TODO"       from              [2019-08-14 Wed 22:09]
+    - *D_step=1, gp_lambda=10, gp_value=none, G_ch=32, D_ch=32, adv_lambda=0.001*
+    - *FID=17.91*
+*** DONE!!!! results/BigGAN_celebahq128/test_celebahq128_wgan_gpreal_adv_20190815-00_47_14 :6108:
+    - State "DONE!!!!"   from "DOING"      [2019-08-16 Fri 18:10]
+    - State "DOING"      from "TODO"       [2019-08-15 Thu 00:48]
+    - State "TODO"       from              [2019-08-15 Thu 00:48]
+    - *D_step=5, gp_lambda=10, gp_value=none, G_ch=32, D_ch=32, adv_lambda=0.001*
+    - *FID=28.55*
+*** DONE!!!! results/BigGAN_celebahq128/test_celebahq128_wgan_gpreal_adv_20190815-00_56_47 :6007:
+    - State "DONE!!!!"   from "DOING"      [2019-08-16 Fri 18:10]
+    - State "DOING"      from "TODO"       [2019-08-15 Thu 00:57]
+    - State "TODO"       from              [2019-08-15 Thu 00:57]
+    - *D_step=1, gp_lambda=10, gp_value=none, G_ch=32, D_ch=32, adv_train=false*
+    - *FID=15.35*
+*** CANCELED results/BigGAN_celebahq128/test_celebahq128_wgan_gpreal_adv_20190815-00_58_59 :6008:
+    - State "CANCELED"   from "DONE!!!!"   [2019-08-16 Fri 11:10]
+    - State "DONE!!!!"   from "DOING"      [2019-08-16 Fri 11:09]
+    - State "DOING"      from "TODO"       [2019-08-15 Thu 01:02]
+    - State "TODO"       from              [2019-08-15 Thu 01:02]
+    - *D_step=5, gp_lambda=10, gp_value=none, G_ch=32, D_ch=32, adv_train=false*
+*** DONE!!!! results/BigGAN_celebahq128/test_celebahq128_wgan_gpreal_adv_20190817-00_50_24 :6007:
+    - State "DONE!!!!"   from "DOING"      [2019-08-19 Mon 08:25]
+    - State "DOING"      from "TODO"       [2019-08-17 Sat 01:02]
+    - State "TODO"       from              [2019-08-17 Sat 01:02]
+    - *gp_real, adv_epoch=5*
+    - *FID=14.95*
+*** DONE!!!! results/BigGAN_celebahq128/test_celebahq128_wgan_gpreal_adv_20190817-01_10_37 :6008:
+    - State "DONE!!!!"   from "DOING"      [2019-08-19 Mon 08:22]
+    - State "DOING"      from "TODO"       [2019-08-17 Sat 01:14]
+    - State "TODO"       from              [2019-08-17 Sat 01:14]
+    - *gp_real, adv_epoch=1*
+    - *FID=14.70*

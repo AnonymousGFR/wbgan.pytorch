@@ -1,0 +1,195 @@
+celeba64_wgan_gp:
+  seed: 1234
+  epochs: 200
+  model:
+    ema_start: 5000
+    parallel: false
+    Generator:
+      G_ch: 32
+#      G_ch: 32
+      dim_z: 120
+      bottom_width: 4
+      G_kernel_size: 3
+      G_attn: '0'
+      G_shared: true
+      shared_dim: 128
+      hier: true
+      cross_replica: false
+      mybn: false
+      G_activation: inplace_relu
+      G_init: ortho
+      G_param: SN
+      norm_style: bn
+      BN_eps: 0.00001
+      SN_eps: 0.000001
+      G_fp16: false
+      num_G_SVs: 1
+      num_G_SV_itrs: 1
+      G_mixed_precision: false
+    Discriminator:
+      D_ch: 32
+#      D_ch: 32
+      D_wide: true
+      D_kernel_size: 3
+      D_attn: '0'
+      D_activation: inplace_relu
+      D_init: ortho
+      D_param: SN
+      SN_eps: 0.000001
+      D_fp16: false
+      num_D_SVs: 1
+      num_D_SV_itrs: 1
+      D_mixed_precision: false
+    optimizer:
+      optim_type: 'adam'
+#      optim_type: 'radam'
+      G_lr: 0.0001
+      G_B1: 0.
+      G_B2: 0.999
+      D_lr: 0.0001
+      D_B1: 0.
+      D_B2: 0.999
+      adam_eps: 0.000001
+  noise:
+    batch_size: 128
+    G_batch_size: 0
+    z_mean: 0.
+    z_var: 1.
+  inception_metric:
+    saved_inception_moments: '~/.keras/BigGAN-PyTorch-1/Celeba64_inception_moments.npz'
+    num_inception_images: 50000
+  dataset:
+    dataset: celeba64
+    datadir: ~/.keras/celeba/
+    shuffle: true
+    num_workers: 2
+
+  train_one_epoch:
+    dummy_train: false
+#    dummy_train: true
+    toggle_grads: true
+#    num_D_steps: 1
+    num_D_steps: 5
+    num_D_accumulations: 1
+    split_D: false
+    adaptive_gp: false
+    adv_train: false
+    gp_lambda: 10.
+    use_bound: false
+    D_ortho: 0.0
+    G_ortho: 0.0
+    num_G_accumulations: 1
+    sample_every: 100
+    sample_start_iter: 20000
+  summary_images:
+    bs_log: 64
+    n_row: 8
+  test:
+    use_ema: false
+
+celeba64_wgan_gp_wl:
+  seed: 1234
+  epochs: 200
+  model:
+    ema_start: 5000
+    parallel: false
+    create_alpha:
+      weight_gp: 1
+#      weight_wd: 1
+      weight_g: 1
+      optim_type: 'adam'
+#      optim_type: 'sgd'
+      lr: 0.001
+      betas:
+        - 0.9
+        - 0.999
+      eps: 1.e-8
+
+    Generator:
+      G_ch: 32
+#      G_ch: 32
+      dim_z: 120
+      bottom_width: 4
+      G_kernel_size: 3
+      G_attn: '0'
+      G_shared: true
+      shared_dim: 128
+      hier: true
+      cross_replica: false
+      mybn: false
+      G_activation: inplace_relu
+      G_init: ortho
+      G_param: SN
+      norm_style: bn
+      BN_eps: 0.00001
+      SN_eps: 0.000001
+      G_fp16: false
+      num_G_SVs: 1
+      num_G_SV_itrs: 1
+      G_mixed_precision: false
+    Discriminator:
+      D_ch: 32
+#      D_ch: 32
+      D_wide: true
+      D_kernel_size: 3
+      D_attn: '0'
+      D_activation: inplace_relu
+      D_init: ortho
+      D_param: SN
+      SN_eps: 0.000001
+      D_fp16: false
+      num_D_SVs: 1
+      num_D_SV_itrs: 1
+      D_mixed_precision: false
+    optimizer:
+      optim_type: 'adam'
+#      optim_type: 'radam'
+      G_lr: 0.0001
+      G_B1: 0.
+      G_B2: 0.999
+      D_lr: 0.0001
+      D_B1: 0.
+      D_B2: 0.999
+      adam_eps: 0.000001
+  noise:
+    batch_size: 128
+    G_batch_size: 0
+    z_mean: 0.
+    z_var: 1.
+  inception_metric:
+    saved_inception_moments: '~/.keras/BigGAN-PyTorch-1/Celeba64_inception_moments.npz'
+    num_inception_images: 50000
+  dataset:
+    dataset: celeba64
+    datadir: ~/.keras/celeba/
+    shuffle: true
+    num_workers: 2
+
+  train_one_epoch:
+    dummy_train: false
+#    dummy_train: true
+    toggle_grads: true
+    num_D_steps: 1
+#    num_D_steps: 5
+    num_D_accumulations: 1
+    split_D: false
+    adaptive_gp: false
+    adv_train: false
+    weigh_loss: true
+    weight_epoch: 200
+    use_entropy: true
+#    use_entropy: false
+    entropy_lambda: 10
+#    entropy_lambda: 1
+    gp_lambda: 10.
+    use_bound: false
+    D_ortho: 0.0
+    G_ortho: 0.0
+    num_G_accumulations: 1
+    sample_every: 100
+    sample_start_iter: 20000
+  summary_images:
+    bs_log: 64
+    n_row: 8
+  test:
+    use_ema: false

@@ -1,0 +1,447 @@
+plot_large_batchsize:
+  title: "large batchsize"
+  tag: 'test/FID'
+  use_dump: True
+  ylim:
+    - 0
+    - 400
+  xlim:
+    - 0
+    - 200
+  lines:
+#    wgan_gp_4096:
+#      tbdir: 'results/DCGAN/test_CelebA64_dcgan_wgan_gp_20190724-08_55_35'
+#    wbgan_gp_b0.5_4096:
+#      tbdir: 'results/DCGAN/test_CelebA64_dcgan_wbgan_gp_20190724-17_26_14'
+#    wbgan_gp_b0.5_2048:
+#      tbdir: 'results/DCGAN/test_CelebA64_dcgan_wbgan_gp_20190725-10_22_41'
+#    wbgan_gp_b0.5_1024:
+#      tbdir: 'results/DCGAN/test_CelebA64_dcgan_wbgan_gp_20190725-16_17_42'
+#    wbgan_gp_b0.5_512:
+#      tbdir: 'results/DCGAN/test_CelebA64_dcgan_wbgan_gp_20190725-20_17_02'
+#    wbgan_gp_b0.5_4096_dist:
+#      tbdir: 'results/DCGAN/test_CelebA64_dcgan_wbgan_gp_dist_20190726-07_44_00'
+#    wbgan_gp_b0.5_2048_dist:
+#      tbdir: 'results/DCGAN/test_CelebA64_dcgan_wbgan_gp_dist_20190726-20_15_00'
+    wgan_gp_adv_2048:
+      tbdir: 'results/DCGAN/test_CelebA64_dcgan_wgan_gpreal_adv_20190808-12_48_35'
+
+
+plot_bs128:
+  title: "bs128"
+  tag: 'test/FID'
+  use_dump: True
+  ylim:
+    - 0
+    - 400
+  xlim:
+    - 0
+    - 200
+  lines:
+    wbgan_gp_b10:
+      tbdir: 'results/DCGAN/test_CelebA64_dcgan_wbgan_gp_20190723-21_31_52'
+    wbgan_gp_b0.5:
+      tbdir: 'results/DCGAN/test_CelebA64_dcgan_wbgan_gp_20190724-09_00_56'
+
+
+CelebA64_dcgan_wgan_gp:
+  seed: 1234
+  epochs: 200
+  model:
+    z_dim: 100
+    ema_start: 5000
+    parallel: false
+  optimizer:
+#    optim_type: 'radam'
+    optim_type: 'adam'
+    d_lr: 0.0002
+    d_beta1: 0.5
+    d_beta2: 0.999
+    g_lr: 0.0002
+    g_beta1: 0.5
+    g_beta2: 0.999
+  noise:
+    z_mean: 0.
+    z_var: 1.
+    batch_size_train: 128
+    batch_size_test: 128
+  inception_metric:
+    saved_inception_moments: '~/.keras/BigGAN-PyTorch-1/Celeba64_inception_moments.npz'
+    num_inception_images: 50000
+  loader:
+    dataset: Celeba64
+    datadir: ~/.keras/celeba/
+    shuffle: true
+    num_workers: 6
+  train_one_epoch:
+    dummy_train: false
+    gp_lambda: 10.
+    bound_type: none
+    n_critic: 1
+#    n_critic: 5
+    sample_every: 100
+    sample_start_iter: 20000
+  test:
+    use_ema: false
+
+CelebA64_dcgan_wgan_gp_bound_sinkhorn:
+  seed: 1234
+  epochs: 200
+  model:
+    z_dim: 100
+    ema_start: 5000
+    parallel: false
+  optimizer:
+    optim_type: 'radam'
+#    optim_type: 'adam'
+    d_lr: 0.0002
+    d_beta1: 0.5
+    d_beta2: 0.999
+    g_lr: 0.0002
+    g_beta1: 0.5
+    g_beta2: 0.999
+  noise:
+    z_mean: 0.
+    z_var: 1.
+    batch_size_train: 128
+    batch_size_test: 128
+  inception_metric:
+    saved_inception_moments: '~/.keras/BigGAN-PyTorch-1/Celeba64_inception_moments.npz'
+    num_inception_images: 50000
+  loader:
+    dataset: Celeba64
+    datadir: ~/.keras/celeba/
+    shuffle: true
+    num_workers: 6
+  train_one_epoch:
+    dummy_train: false
+    gp_lambda: 10.
+    bound_type: 'sinkhorn'
+#    bound_type: 'constant'
+    bound: 1
+    sinkhorn_eps: 0.01
+    sinkhorn_niter: 100
+    sinkhorn_pi_detach: false
+    min_sinkhorn_in_g: true
+#    min_sinkhorn_in_g: false
+    sinkhorn_lambda: 0.5
+    n_critic: 1
+#    n_critic: 5
+    sample_every: 100
+    sample_start_iter: 20000
+  test:
+    use_ema: false
+
+CelebA64_dcgan_wgan_div:
+  seed: 1234
+  epochs: 200
+  model:
+    z_dim: 100
+    ema_start: 5000
+    parallel: false
+  optimizer:
+    d_lr: 0.0002
+    d_beta1: 0.5
+    d_beta2: 0.999
+    g_lr: 0.0002
+    g_beta1: 0.5
+    g_beta2: 0.999
+  noise:
+    z_mean: 0.
+    z_var: 1.
+    batch_size_train: 128
+    batch_size_test: 128
+  inception_metric:
+    saved_inception_moments: '~/.keras/BigGAN-PyTorch-1/Celeba64_inception_moments.npz'
+    num_inception_images: 50000
+  loader:
+    dataset: Celeba64
+    datadir: ~/.keras/celeba/
+    shuffle: true
+    num_workers: 6
+  train_one_epoch:
+    dummy_train: false
+    bound_type: none
+    n_critic: 1
+    sample_every: 100
+    sample_start_iter: 20000
+  test:
+    use_ema: false
+
+CelebA64_dcgan_wgan_div_bound_sinkhorn:
+  seed: 1234
+  epochs: 200
+  model:
+    z_dim: 100
+    ema_start: 5000
+    parallel: false
+  optimizer:
+    d_lr: 0.0002
+    d_beta1: 0.5
+    d_beta2: 0.999
+    g_lr: 0.0002
+    g_beta1: 0.5
+    g_beta2: 0.999
+  noise:
+    z_mean: 0.
+    z_var: 1.
+    batch_size_train: 128
+    batch_size_test: 128
+  inception_metric:
+    saved_inception_moments: '~/.keras/BigGAN-PyTorch-1/Celeba64_inception_moments.npz'
+    num_inception_images: 50000
+  loader:
+    dataset: Celeba64
+    datadir: ~/.keras/celeba/
+    shuffle: true
+    num_workers: 6
+  train_one_epoch:
+    dummy_train: false
+    bound_type: 'sinkhorn'
+    sinkhorn_eps: 0.01
+    sinkhorn_niter: 100
+    sinkhorn_pi_detach: false
+    sinkhorn_lambda: 0.5
+    n_critic: 1
+    sample_every: 100
+    sample_start_iter: 20000
+  test:
+    use_ema: false
+
+wbgan_gp_celeba64:
+  seed: 1234
+  epochs: 200
+  model:
+    z_dim: 100
+    ema_start: 5000
+    parallel: true
+  optimizer:
+    d_lr: 0.0002
+    d_beta1: 0.5
+    d_beta2: 0.999
+    g_lr: 0.0002
+    g_beta1: 0.5
+    g_beta2: 0.999
+  noise:
+    z_mean: 0.
+    z_var: 1.
+    batch_size_train: 128
+    batch_size_test: 128
+  inception_metric:
+    saved_inception_moments: '~/.keras/BigGAN-PyTorch-1/Celeba64_inception_moments.npz'
+    num_inception_images: 50000
+  loader:
+    dataset: Celeba64
+    datadir: ~/.keras/celeba/
+    shuffle: true
+    num_workers: 2
+  train_one_epoch:
+    dummy_train: false
+    bound_type: 'constant'
+    bound: 0.5
+    gp_lambda: 10.
+    n_critic: 1
+    sample_every: 100
+    sample_start_iter: 20000
+  test:
+    use_ema: false
+
+
+wbgan_gp_dist_celeba64:
+  seed: 1234
+  epochs: 200
+  model:
+    z_dim: 100
+    ema_start: 5000
+    parallel: true
+  optimizer:
+    d_lr: 0.0002
+    d_beta1: 0.5
+    d_beta2: 0.999
+    g_lr: 0.0002
+    g_beta1: 0.5
+    g_beta2: 0.999
+  noise:
+    z_mean: 0.
+    z_var: 1.
+#    batch_size_train: 128
+#    batch_size_test: 128
+    batch_size_train: 341
+    batch_size_test: 1024
+  inception_metric:
+    saved_inception_moments: '~/.keras/BigGAN-PyTorch-1/Celeba64_inception_moments.npz'
+    num_inception_images: 50000
+  loader:
+    dataset: Celeba64
+    datadir: ~/.keras/celeba/
+    shuffle: true
+    num_workers: 1
+  train_one_epoch:
+    dummy_train: false
+    bound: 0.5
+    gp_lambda: 10.
+    n_critic: 1
+    sample_every: 10
+    sample_start_iter: 20000
+  test:
+    use_ema: false
+
+
+wgan_gpreal_celeba64:
+  seed: 1234
+  epochs: 200
+  model:
+    z_dim: 100
+    ema_start: 5000
+    parallel: false
+  optimizer:
+    d_lr: 0.0002
+    d_beta1: 0.5
+    d_beta2: 0.999
+    g_lr: 0.0002
+    g_beta1: 0.5
+    g_beta2: 0.999
+  noise:
+    z_mean: 0.
+    z_var: 1.
+    batch_size_train: 128
+    batch_size_test: 128
+  inception_metric:
+    saved_inception_moments: '~/.keras/BigGAN-PyTorch-1/Celeba64_inception_moments.npz'
+    num_inception_images: 50000
+  loader:
+    dataset: Celeba64
+    datadir: ~/.keras/celeba/
+    shuffle: true
+    num_workers: 4
+  train_one_epoch:
+    dummy_train: false
+    gp_lambda: 10.
+    adv_train: false
+    bound_type: none
+    n_critic: 1
+    sample_every: 100
+    sample_start_iter: 1
+  test:
+    use_ema: false
+
+wbgan_gpreal_celeba64:
+  seed: 1234
+  epochs: 200
+  model:
+    z_dim: 100
+    ema_start: 5000
+    parallel: true
+  optimizer:
+    d_lr: 0.0002
+    d_beta1: 0.5
+    d_beta2: 0.999
+    g_lr: 0.0002
+    g_beta1: 0.5
+    g_beta2: 0.999
+  noise:
+    z_mean: 0.
+    z_var: 1.
+    batch_size_train: 128
+    batch_size_test: 128
+  inception_metric:
+    saved_inception_moments: '~/.keras/BigGAN-PyTorch-1/Celeba64_inception_moments.npz'
+    num_inception_images: 50000
+  loader:
+    dataset: Celeba64
+    datadir: ~/.keras/celeba/
+    shuffle: true
+    num_workers: 2
+  train_one_epoch:
+    dummy_train: false
+    bound_type: 'constant'
+    bound: 0.5
+    gp_lambda: 10.
+    adv_train: false
+    n_critic: 1
+    sample_every: 100
+    sample_start_iter: 20000
+  test:
+    use_ema: false
+
+
+wgan_gpreal_adv_celeba64:
+  seed: 1234
+  epochs: 200
+  model:
+    z_dim: 100
+    ema_start: 5000
+    parallel: true
+#    parallel: false
+  optimizer:
+    d_lr: 0.0002
+    d_beta1: 0.5
+    d_beta2: 0.999
+    g_lr: 0.0002
+    g_beta1: 0.5
+    g_beta2: 0.999
+  noise:
+    z_mean: 0.
+    z_var: 1.
+    batch_size_train: 2048
+    batch_size_test: 2048
+#    batch_size_train: 128
+#    batch_size_test: 128
+  inception_metric:
+    saved_inception_moments: '~/.keras/BigGAN-PyTorch-1/Celeba64_inception_moments.npz'
+    num_inception_images: 50000
+  loader:
+    dataset: Celeba64
+    datadir: ~/.keras/celeba/
+    shuffle: true
+    num_workers: 5
+#    num_workers: 2
+  train_one_epoch:
+    dummy_train: false
+    gp_lambda: 10.
+    adv_train: true
+    bound_type: none
+    n_critic: 1
+    sample_every: 100
+    sample_start_iter: 10000
+  test:
+    use_ema: false
+
+wbgan_gpreal_adv_celeba64:
+  seed: 1234
+  epochs: 200
+  model:
+    z_dim: 100
+    ema_start: 5000
+    parallel: true
+  optimizer:
+    d_lr: 0.0002
+    d_beta1: 0.5
+    d_beta2: 0.999
+    g_lr: 0.0002
+    g_beta1: 0.5
+    g_beta2: 0.999
+  noise:
+    z_mean: 0.
+    z_var: 1.
+    batch_size_train: 128
+    batch_size_test: 128
+  inception_metric:
+    saved_inception_moments: '~/.keras/BigGAN-PyTorch-1/Celeba64_inception_moments.npz'
+    num_inception_images: 50000
+  loader:
+    dataset: Celeba64
+    datadir: ~/.keras/celeba/
+    shuffle: true
+    num_workers: 2
+  train_one_epoch:
+    dummy_train: false
+    bound_type: 'constant'
+    bound: 0.5
+    gp_lambda: 10.
+    adv_train: true
+    n_critic: 1
+    sample_every: 100
+    sample_start_iter: 20000
+  test:
+    use_ema: false

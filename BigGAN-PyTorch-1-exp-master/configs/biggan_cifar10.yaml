@@ -1,0 +1,474 @@
+cifar10_wgan_gpreal:
+  seed: 1234
+  epochs: 200
+  model:
+    z_dim: 100
+    ema_start: 5000
+    parallel: false
+    Generator:
+      G_ch: 8
+#      G_ch: 32
+      dim_z: 120
+      bottom_width: 4
+      G_kernel_size: 3
+      G_attn: '0'
+      G_shared: true
+      shared_dim: 128
+      hier: true
+      cross_replica: false
+      mybn: false
+      G_activation: inplace_relu
+      G_init: ortho
+      G_param: SN
+      norm_style: bn
+      BN_eps: 0.00001
+      SN_eps: 0.000001
+      G_fp16: false
+      num_G_SVs: 1
+      num_G_SV_itrs: 1
+      G_mixed_precision: false
+    Discriminator:
+      D_ch: 8
+#      D_ch: 32
+      D_wide: true
+      D_kernel_size: 3
+      D_attn: '0'
+      D_activation: inplace_relu
+      D_init: ortho
+      D_param: SN
+      SN_eps: 0.000001
+      D_fp16: false
+      num_D_SVs: 1
+      num_D_SV_itrs: 1
+      D_mixed_precision: false
+    optimizer:
+      G_lr: 0.0001
+      G_B1: 0.
+      G_B2: 0.999
+      D_lr: 0.0001
+      D_B1: 0.
+      D_B2: 0.999
+      adam_eps: 0.000001
+  noise:
+    batch_size: 64
+    G_batch_size: 0
+    z_mean: 0.
+    z_var: 1.
+  inception_metric:
+    saved_inception_moments: '~/.keras/cifar10/cifar10_inception_moments.npz'
+    num_inception_images: 50000
+  dataset:
+    dataset: 'C10'
+    data_root: ~/.keras/cifar10
+    load_in_mem: true
+    augment: false
+    use_multiepoch_sampler: false
+    num_workers: 2
+    pin_memory: false
+    drop_last: true
+    shuffle: true
+
+  train_one_epoch:
+    dummy_train: false
+    toggle_grads: true
+    num_D_steps: 1
+    num_D_accumulations: 1
+    split_D: false
+    adaptive_gp: false
+    adv_train: false
+    gp_lambda: 10.
+    use_bound: false
+    D_ortho: 0.0
+    G_ortho: 0.0
+    num_G_accumulations: 1
+    sample_every: 100
+    sample_start_iter: 20000
+  summary_images:
+    bs_log: 64
+    n_row: 8
+  test:
+    use_ema: false
+
+
+cifar10_wgan_gpreal_adv:
+  seed: 1234
+  epochs: 200
+  model:
+    z_dim: 100
+    ema_start: 5000
+    parallel: false
+    Generator:
+      G_ch: 32
+      dim_z: 120
+      bottom_width: 4
+      G_kernel_size: 3
+      G_attn: '0'
+      G_shared: true
+      shared_dim: 128
+      hier: true
+      cross_replica: false
+      mybn: false
+      G_activation: inplace_relu
+      G_init: ortho
+      G_param: SN
+      norm_style: bn
+      BN_eps: 0.00001
+      SN_eps: 0.000001
+      G_fp16: false
+      num_G_SVs: 1
+      num_G_SV_itrs: 1
+      G_mixed_precision: false
+    Discriminator:
+      D_ch: 32
+      D_wide: true
+      D_kernel_size: 3
+      D_attn: '0'
+      D_activation: inplace_relu
+      D_init: ortho
+      D_param: SN
+      SN_eps: 0.000001
+      D_fp16: false
+      num_D_SVs: 1
+      num_D_SV_itrs: 1
+      D_mixed_precision: false
+    optimizer:
+      G_lr: 0.0001
+      G_B1: 0.
+      G_B2: 0.999
+      D_lr: 0.0001
+      D_B1: 0.
+      D_B2: 0.999
+      adam_eps: 0.000001
+  noise:
+    batch_size: 64
+    G_batch_size: 0
+    z_mean: 0.
+    z_var: 1.
+  inception_metric:
+    saved_inception_moments: '~/.keras/cifar10/cifar10_inception_moments.npz'
+    num_inception_images: 50000
+  dataset:
+    dataset: 'C10'
+    data_root: ~/.keras/cifar10
+    load_in_mem: true
+    augment: false
+    use_multiepoch_sampler: false
+    num_workers: 2
+    pin_memory: false
+    drop_last: true
+    shuffle: true
+
+  train_one_epoch:
+    dummy_train: false
+    toggle_grads: true
+    num_D_steps: 5
+    num_D_accumulations: 1
+    split_D: false
+    adaptive_gp: true
+    adv_train: true
+    adv_lr: 0.1
+    adv_value: 0
+    gp_lambda: 0
+    use_bound: true
+    bound: 10
+    D_ortho: 0.0
+    G_ortho: 0.0
+    num_G_accumulations: 1
+    sample_every: 100
+    sample_start_iter: 20000
+  summary_images:
+    bs_log: 64
+    n_row: 8
+  test:
+    use_ema: false
+
+
+cifar10_wgan_gp:
+  seed: 1234
+  epochs: 300
+  model:
+    z_dim: 100
+    ema_start: 5000
+    parallel: false
+    Generator:
+      G_ch: 32
+#      G_ch: 32
+      dim_z: 120
+      bottom_width: 4
+      G_kernel_size: 3
+      G_attn: '0'
+      G_shared: true
+      shared_dim: 128
+      hier: true
+      cross_replica: false
+      mybn: false
+      G_activation: inplace_relu
+      G_init: ortho
+      G_param: SN
+      norm_style: bn
+      BN_eps: 0.00001
+      SN_eps: 0.000001
+      G_fp16: false
+      num_G_SVs: 1
+      num_G_SV_itrs: 1
+      G_mixed_precision: false
+    Discriminator:
+      D_ch: 32
+#      D_ch: 32
+      D_wide: true
+      D_kernel_size: 3
+      D_attn: '0'
+      D_activation: inplace_relu
+      D_init: ortho
+      D_param: SN
+      SN_eps: 0.000001
+      D_fp16: false
+      num_D_SVs: 1
+      num_D_SV_itrs: 1
+      D_mixed_precision: false
+    optimizer:
+      G_lr: 0.0001
+      G_B1: 0.
+      G_B2: 0.999
+      D_lr: 0.0001
+      D_B1: 0.
+      D_B2: 0.999
+      adam_eps: 0.000001
+  noise:
+#    batch_size: 64
+    batch_size: 32
+    G_batch_size: 0
+    z_mean: 0.
+    z_var: 1.
+  inception_metric:
+    saved_inception_moments: '~/.keras/cifar10/cifar10_inception_moments.npz'
+    num_inception_images: 50000
+  dataset:
+    dataset: 'C10'
+    data_root: ~/.keras/cifar10
+    load_in_mem: true
+    augment: false
+    use_multiepoch_sampler: false
+    num_workers: 4
+    pin_memory: false
+    drop_last: true
+    shuffle: true
+
+  train_one_epoch:
+    dummy_train: false
+#    dummy_train: true
+    toggle_grads: true
+#    num_D_steps: 1
+    num_D_steps: 5
+    num_D_accumulations: 1
+    split_D: false
+    adaptive_gp: false
+    adv_train: false
+    gp_lambda: 10.
+    use_bound: false
+    D_ortho: 0.0
+    G_ortho: 0.0
+    num_G_accumulations: 1
+    sample_every: 100
+    sample_start_iter: 20000
+  summary_images:
+    bs_log: 64
+    n_row: 8
+  test:
+    use_ema: false
+
+cifar10_wgan_gp_sinkhorn:
+  seed: 1234
+  epochs: 300
+  model:
+    z_dim: 100
+    ema_start: 5000
+    parallel: false
+    Generator:
+      G_ch: 32
+#      G_ch: 32
+      dim_z: 120
+      bottom_width: 4
+      G_kernel_size: 3
+      G_attn: '0'
+      G_shared: true
+      shared_dim: 128
+      hier: true
+      cross_replica: false
+      mybn: false
+      G_activation: inplace_relu
+      G_init: ortho
+      G_param: SN
+      norm_style: bn
+      BN_eps: 0.00001
+      SN_eps: 0.000001
+      G_fp16: false
+      num_G_SVs: 1
+      num_G_SV_itrs: 1
+      G_mixed_precision: false
+    Discriminator:
+      D_ch: 32
+#      D_ch: 32
+      D_wide: true
+      D_kernel_size: 3
+      D_attn: '0'
+      D_activation: inplace_relu
+      D_init: ortho
+      D_param: SN
+      SN_eps: 0.000001
+      D_fp16: false
+      num_D_SVs: 1
+      num_D_SV_itrs: 1
+      D_mixed_precision: false
+    optimizer:
+      G_lr: 0.0001
+      G_B1: 0.
+      G_B2: 0.999
+      D_lr: 0.0001
+      D_B1: 0.
+      D_B2: 0.999
+      adam_eps: 0.000001
+  noise:
+    batch_size: 64
+    G_batch_size: 0
+    z_mean: 0.
+    z_var: 1.
+  inception_metric:
+    saved_inception_moments: '~/.keras/cifar10/cifar10_inception_moments.npz'
+    num_inception_images: 50000
+  dataset:
+    dataset: 'C10'
+    data_root: ~/.keras/cifar10
+    load_in_mem: true
+    augment: false
+    use_multiepoch_sampler: false
+    num_workers: 4
+    pin_memory: false
+    drop_last: true
+    shuffle: true
+
+  train_one_epoch:
+    dummy_train: false
+#    dummy_train: true
+    toggle_grads: true
+    num_D_steps: 1
+#    num_D_steps: 5
+    num_D_accumulations: 1
+    split_D: false
+    adaptive_gp: false
+    adv_train: false
+    gp_lambda: 10.
+    d_sinkhorn: true
+    g_sinkhorn: true
+    sinkhorn_c:
+      sinkhorn_eps: 0.01
+      sinkhorn_niter: 100
+      sinkhorn_pi_detach: false
+      sinkhorn_lambda: 0.5
+    D_ortho: 0.0
+    G_ortho: 0.0
+    num_G_accumulations: 1
+    sample_every: 100
+    sample_start_iter: 20000
+  summary_images:
+    bs_log: 64
+    n_row: 8
+  test:
+    use_ema: false
+
+cifar10_hingeloss:
+  seed: 1234
+  epochs: 300
+  model:
+    z_dim: 100
+    ema_start: 15000
+    parallel: false
+    Generator:
+      G_ch: 32
+#      G_ch: 32
+      dim_z: 120
+      bottom_width: 4
+      G_kernel_size: 3
+      G_attn: '0'
+      G_shared: true
+      shared_dim: 128
+      hier: true
+      cross_replica: false
+      mybn: false
+      G_activation: inplace_relu
+      G_init: ortho
+      G_param: SN
+      norm_style: bn
+      BN_eps: 0.00001
+      SN_eps: 0.000001
+      G_fp16: false
+      num_G_SVs: 1
+      num_G_SV_itrs: 1
+      G_mixed_precision: false
+    Discriminator:
+      D_ch: 32
+#      D_ch: 32
+      D_wide: true
+      D_kernel_size: 3
+      D_attn: '0'
+      D_activation: inplace_relu
+      D_init: ortho
+      D_param: SN
+      SN_eps: 0.000001
+      D_fp16: false
+      num_D_SVs: 1
+      num_D_SV_itrs: 1
+      D_mixed_precision: false
+    optimizer:
+      G_lr: 0.0001
+      G_B1: 0.
+      G_B2: 0.999
+      D_lr: 0.0001
+      D_B1: 0.
+      D_B2: 0.999
+      adam_eps: 0.000001
+  noise:
+#    batch_size: 64
+    batch_size: 32
+    G_batch_size: 0
+    z_mean: 0.
+    z_var: 1.
+  inception_metric:
+    saved_inception_moments: '~/.keras/cifar10/cifar10_inception_moments.npz'
+    num_inception_images: 50000
+  dataset:
+    dataset: 'C10'
+    data_root: ~/.keras/cifar10
+    load_in_mem: true
+    augment: false
+    use_multiepoch_sampler: false
+    num_workers: 4
+    pin_memory: false
+    drop_last: true
+    shuffle: true
+
+  train_one_epoch:
+    dummy_train: false
+#    dummy_train: true
+    toggle_grads: true
+#    num_D_steps: 1
+    num_D_steps: 5
+    num_D_accumulations: 1
+#    num_D_accumulations: 8
+    num_G_accumulations: 1
+#    num_G_accumulations: 8
+    split_D: false
+    adaptive_gp: false
+    adv_train: false
+    gp_lambda: 10.
+    use_bound: false
+    D_ortho: 0.0
+    G_ortho: 0.0
+    sample_every: 100
+    sample_start_iter: 20000
+  summary_images:
+    bs_log: 64
+    n_row: 8
+  test:
+    use_ema: false
+#    use_ema: true

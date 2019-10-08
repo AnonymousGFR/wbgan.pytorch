@@ -78,7 +78,6 @@ CelebA64_dcgan_wgan_gp:
     gp_lambda: 10.
     bound_type: none
     n_critic: 1
-#    n_critic: 5
     sample_every: 100
     sample_start_iter: 20000
   test:
@@ -92,8 +91,8 @@ CelebA64_dcgan_wgan_gp_bound_sinkhorn:
     ema_start: 5000
     parallel: false
   optimizer:
-    optim_type: 'radam'
-#    optim_type: 'adam'
+#    optim_type: 'radam'
+    optim_type: 'adam'
     d_lr: 0.0002
     d_beta1: 0.5
     d_beta2: 0.999
@@ -126,7 +125,6 @@ CelebA64_dcgan_wgan_gp_bound_sinkhorn:
 #    min_sinkhorn_in_g: false
     sinkhorn_lambda: 0.5
     n_critic: 1
-#    n_critic: 5
     sample_every: 100
     sample_start_iter: 20000
   test:

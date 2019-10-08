@@ -14,7 +14,7 @@ class Testing_Celeba64_DCGAN(unittest.TestCase):
     """
     Usage:
         source activate Peterou_torch_py36
-        export CUDA_VISIBLE_DEVICES=1
+        export CUDA_VISIBLE_DEVICES=0
         export PORT=6007
         export TIME_STR=1
         export PYTHONPATH=../../submodule:..

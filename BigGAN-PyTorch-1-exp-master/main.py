@@ -3,7 +3,7 @@ import argparse
 from tensorboardX import SummaryWriter
 from easydict import EasyDict
 
-sys.path.insert(0, '../submodule')
+# sys.path.insert(0, '../submodule')
 from template_lib import utils
 from template_lib.utils import config, modelarts_utils, logging_utils
 

@@ -65,8 +65,8 @@ class Prepare_data(unittest.TestCase):
         export PORT=6011
         export TIME_STR=1
         export PYTHONPATH=../../submodule:..
-        python -c "import test_DCGAN; \
-        test_DCGAN.Prepare_data().test_Calculate_inception_moments_Celeba64()"
+        python -c "import test_prepare_data; \
+        test_prepare_data.Prepare_data().test_Calculate_inception_moments_Celeba64()"
 
     :return:
     """
